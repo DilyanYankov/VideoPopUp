@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Title</title>
+		<script type="text/javascript" src="libs/js/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="libs/js/knockout-3.3.0.js"></script>
+		<script type="text/javascript" src="index.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" href="css/font-awesome-4.4.0/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div id="popupView" class="center">
+			<form data-bind="submit: getVideoSrc" class="center videoWidth">
+				<input id="videoInput" class="textBoxWidth" data-bind="value: youTubeURL" type="text">
+				<button type="submit" class="submitButtons floatRight bodyFont">Submit</button>
+			</form>
+
+			<div class="center">
+				<iframe id="player" type="text/html" color="white" width="640" height="390"
+  				data-bind="attr: { src: source }"
+  				frameborder="0"></iframe>
+  			</div>
+
+  			<div class="videoWidth topMargin blockPadding">
+  				<a href="" class="socialButtons bodyFont"><i class="fa fa-heart-o socialButtonIcons"></i> LIKE</a>
+  				<a href="" class="socialButtons bodyFont"><i class="fa fa-share-alt leftMargin socialButtonIcons"></i> SHARE</a>
+  				<a href="" id="deleteButton" class="formatButtons floatRight leftMargin bodyFont">Delete</a>
+  				<a href="" id="editButton" class="formatButtons floatRight bodyFont">Edit</a>
+  			</div>
+
+			<form id="commentInput" data-bind="submit: submitComment" class="topMargin">
+				<textarea class="textBoxWidth" rows="1" placeholder="Comment.." data-bind="value: commentInput"></textarea>
+				<button type="submit" class="submitButtons floatRight bodyFont">Comment</button>
+			</form>
+
+			<div data-bind="template: { name: 'comment-template', foreach: commentArr }"></div>
+		</div>
+		<script type="text/html" id="comment-template">
+		<div class="topMargin">
+			<image class="floatLeft" data-bind="attr: { src: image }" height="50" width="50">
+
+			<div class="nameDateHolder">
+				<h3 data-bind="text: name"></h3>
+				<p class="date"><span data-bind="text: date"></span></p>
+			</div>
+
+			<div class="commentHolder">
+				<p class="bodyFont"><span data-bind="text: text"></span></p>
+				<a href="" class="socialButtons bodyFont"><i class="fa fa-heart-o socialButtonIcons"></i> LIKE</a>
+  				<a href="" class="socialButtons bodyFont"><i class="fa fa-share-alt leftMargin socialButtonIcons"></i> SHARE</a>
+  				<a href="" class="socialButtons bodyFont"><i class="fa fa-commenting-o leftMargin socialButtonIcons"></i> COMMENT</a>
+  				<a href="" class="socialButtons floatRight bodyFont"><i class="fa fa-flag-o socialButtonIcons reportButtonIcons"></i> REPORT</a>
+			</div>
+
+			<div class="replyInput">
+				<a href="" class="socialButtons">Comment</a>
+  				<a href="" class="socialButtons">Photo</a>
+  				<a href="" class="socialButtons">Feedback</a>
+  				<form  data-bind="submit: $parent.submitReply" class="topMargin">
+	    			<textarea class="textBoxWidth" rows="1" placeholder="Reply.." data-bind="value: replyInput"></textarea>
+					<button type="submit" class="submitButtons floatRight bodyFont">Reply</button>
+    			</form>
+			</div>
+    		
+    		<div data-bind="template: { name: 'reply-template', foreach: replyArr }"></div>
+    	</div>
+		</script>
+		<script type="text/html" id="reply-template">
+			<div class="replyHolder">
+				<div>
+					<h3 data-bind="text: name"></h3>
+					<p class="date"><span data-bind="text: date"></span></p>
+				</div>
+				<p class="bodyFont"><span data-bind="text: replyText"></span></p>
+			</div>	
+		</script>
+	</body>
+</html>

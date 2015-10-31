@@ -1,0 +1,162 @@
+a{
+	text-decoration: none;
+}
+
+input[type=text]{
+	height: 20px;
+	padding: 5px;
+}
+
+textarea{
+	height: 20px;
+	padding: 5px;
+	border: 2px solid #EEE inset;
+}
+
+h3{
+	color: #33D6FF;
+	margin-bottom: 5px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.center{
+	margin: auto;
+	width: 640px;
+	margin-bottom: 2%;
+}
+
+.floatLeft{
+	float: left;
+}
+
+.floatRight{
+	float: right;
+}
+
+.videoWidth{
+	width: 640px;
+}
+
+.leftMargin{
+	margin-left: 10px;
+}
+
+.topMargin{
+	margin-top: 10px;
+}
+
+.submitButtons{
+	color: #FFFFFF;
+	padding: 8px 24px;
+	background-color: #CC0052;
+	border: 1px;
+	border-radius:3px;
+	border-color: #CC0052;
+	outline: none;
+}
+
+.submitButtons:hover{
+	background-color: #660029;
+	outline: none;
+}
+
+.socialButtons{
+	color: #000000;
+	font-family:Arial;
+	font-size:13px;
+	padding: 5px;
+}
+
+.socialButtonIcons{
+	color: #33D6FF;
+}
+
+.reportButtonIcons{
+	color: #BBBBBB;
+}
+
+.socialButtons:hover{
+	background: #E6E6E6;
+	border-radius:3px;
+
+}
+
+.formatButtons{
+	border-radius:3px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #854629;
+}
+
+.blockPadding{
+	padding-bottom: 10px;
+}
+
+.textBoxWidth{
+	width: 500px;
+	outline: none;
+}
+
+#deleteButton{
+	background-color: #CC0052; 
+}
+
+#deleteButton:hover{
+	background-color: #660029;
+}
+
+#editButton{
+	background-color: #1A1A1A; 
+}
+
+#editButton:hover{
+	background-color: #484848;
+}
+
+#player{
+	background-color: gray;
+}
+
+#commentInput{
+	padding-bottom: 30px;
+	border-bottom: 1px solid #BBBBBB;
+}
+
+.nameDateHolder{
+	margin-left: 60px;
+}
+
+.date{
+	margin-top: 5px;
+	font-size: 12px;
+	color: #BBBBBB;
+}
+
+.commentHolder{
+	border-left: 3px solid #BBBBBB;
+	border-bottom: 1px solid #BBBBBB;
+	margin-top: 30px;	
+	padding: 10px;
+}
+
+.replyInput{
+	border-left: 3px solid #969696;
+	border-bottom: 1px solid #BBBBBB;	
+	padding: 10px;
+}
+
+.replyHolder{
+	border-left: 3px solid #BBBBBB;
+	border-bottom: 1px solid #BBBBBB;	
+	padding: 10px;
+	margin-left: 50px;
+}
+
+.bodyFont{
+	font-family: 'Nunito', sans-serif;
+}
